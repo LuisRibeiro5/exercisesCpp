@@ -14,7 +14,7 @@ int main(){
         
     } while (n > tmax || n < 1);
 
-    int vet[n];
+    int vet[tmax];
     for(int i = 0; i < n; i++){
         cout << "Digite o " << i + 1 << "o valor: ";
         cin >> vet[i];

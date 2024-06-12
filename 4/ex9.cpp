@@ -13,8 +13,8 @@ int main(){
         }
     } while (n > tmax || n < 1);
 
-    string aluno[n];
-    float nota[n];
+    string aluno[tmax];
+    float nota[tmax];
     cin.ignore();
     for (int i = 0; i < n; i++)
     {
