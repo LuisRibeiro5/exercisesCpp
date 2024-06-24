@@ -13,3 +13,5 @@ Listas
 5: vetoresEx
 
 6: Matrizes M3 UniVali
+
+7: Exercicios Matrizes
