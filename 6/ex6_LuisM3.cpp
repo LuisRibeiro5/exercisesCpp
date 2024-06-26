@@ -11,40 +11,36 @@ int main(){
         cin >> n;
     } while (n < 2 || n > 10);
 
-    float custo[10] = {0};
-    cout << "Custo de cada motor: " << endl;
-    for (int i = 0; i < n; i++){
-        cout << "Motor " << i + 1 << ": ";
-        cin >> custo[i];
-    }
-    
-    int tabela[12][10] = {{0}};
+    int mA[12][10] = {{0}};
     cout << "Motores produzidos em cada mes do ano: " << endl;
     for (int i = 0; i < 12; i++){
         for (int j = 0; j < n; j++)
         {
             cout << "Mes " << i + 1 << ", Qtde Motor " << j + 1;
-            cin >> tabela[i][j]; 
+            cin >> mA[i][j]            ;             
         }
-    }
-    
-    float custoM[12] = {0};
-    for (int i = 0; i < 12; i++){
-        for (int j = 0; j < n; j++)
-        {
-             custoM[i] += tabela[i][j] * custo[j];
-        }
+    }        
+
+    float vetC[10] = {0};
+    cout << "Custo de cada motor: " << endl;
+    for (int i = 0; i < n; i++){
+        cout << "Motor " << i + 1 << ": ";
+        cin >> vetC[i];
     }
     
     float anual = 0;
-    for (int i = 0; i < 12; i++)
-    {
-        anual += custoM[i]; 
+    float vetCM[12] = {0};
+    for (int i = 0; i < 12; i++){
+        for (int j = 0; j < n; j++)
+        {
+            vetCM[i] += mA[i][j] * vetC[j];
+        }
+        anual += vetCM[i];
     }
     
     for (int i = 0; i < 12; i++)
     {
-        cout << "Custo no mes " << i + 1 << ": " << custoM[i] << endl;
+        cout << "Custo no mes " << i + 1 << ": " << vetCM[i] << endl;
     }
 
     cout << "Custo anual foi de : " << anual;

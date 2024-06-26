@@ -1,6 +1,5 @@
 /*Ler um vetor R de 10 elementos e um vetor S de 20 elementos. A seguir, gerar um vetor X que contenha uma 
-única ocorrência dos elementos comuns a R e S (intersecção). Após completar o preenchimento, mostrar o 
-vetor X. Considerar que nos vetores R e S podem existir elementos repetidos. */
+única ocorrência dos elementos comuns a R e S (intersecção). Após completar o preenchimento, mostrar o vetor X. Considerar que nos vetores R e S podem existir elementos repetidos. */
 #include<iostream>
 using namespace std;
 int main(){
@@ -25,7 +24,7 @@ int main(){
             if (R[i] == S[j]){
 
                 bool taNoVetor = false;
-                for (int k = 0; k < 10; k++){
+                for (int k = 0; k < contX; k++){
                     if(R[i] == X[k]){
                         taNoVetor = true;
                         break;
@@ -33,8 +32,7 @@ int main(){
                 }
                 
                 if(!taNoVetor){
-                    X[contX] = R[i];
-                    contX++;
+                    X[contX++] = R[i];
                     break;
                 }
                 

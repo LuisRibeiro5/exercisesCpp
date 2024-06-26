@@ -20,9 +20,9 @@ int main(){
         for (int j = 0; j < 10; j++){
             do{
             cout << "Aluno " << i + 1 << " questao " << j + 1 << ": ";
-            gab[i]=toupper(cin.get());
+            resp[i][j]=toupper(cin.get());
             cin.ignore();
-        }while(gab[i] < 'A' || gab[i] > 'E');
+        }while(resp[i][j] < 'A' || resp[i][j] > 'E');
         }
     }
     
@@ -30,7 +30,7 @@ int main(){
     for (int i = 0; i < 20; i++){
         for (int j = 0; j < 10; j++){
             if (resp[i][j] == gab[j]){
-                aluno[i] += 1;
+                aluno[i] ++;
             }
         }
     }
