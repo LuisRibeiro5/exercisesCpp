@@ -1,6 +1,4 @@
-/*Ler 2 vetores X e Y de 10 elementos cada um. Intercalar os 
-elementos desses 2 vetores formando assim, um novo vetor R de 20 elementos, onde nas posições pares de 
-R estejam os elementos de X e nas posições ímpares os elementos de Y. Após a geração completa, mostrar o 
+/*Ler 2 vetores X e Y de 10 elementos cada um. Intercalar os elementos desses 2 vetores formando assim, um novo vetor R de 20 elementos, onde nas posições pares de R estejam os elementos de X e nas posições ímpares os elementos de Y. Após a geração completa, mostrar o 
 vetor R na tela. */
 #include<iostream>
 using namespace std;
@@ -15,9 +13,11 @@ int main(){
         cout << "Vetor Y na posicao " << i + 1 << endl;
         cin >> Y[i];
     }
-    
-    //criacao do vetor R intercalando os numeros de X e Y
+
+    //att: adicionando forma mais otimizada:
+    //criacao do vetor R intercalando os numeros de X e Y.
     int R[20];
+    /*
     int contX = 0, contY = 0;
     for (int i = 0; i < 20; i++){
         if(i % 2 == 0){
@@ -27,7 +27,11 @@ int main(){
             R[i] = Y[contY];
             contY++;
         }
-    }
+    }*/
+   for(int i = 0, j = 0; i < 10; i++){
+        R[j++] = X[i];
+        R[j++] = Y[i];
+   }
 
     for (int i = 0; i < 20; i++)
     {
